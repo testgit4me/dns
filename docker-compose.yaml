@@ -8,7 +8,21 @@ services:
       always
     networks:
       default:
-        ipv4_address: 172.16.1.254/24
+        ipv4_address: 172.16.1.254
+  
+  nginx:
+    image: nginx
+    container_name: nginx
+    hostname: nginx
+    ports:
+      - 80:80
+    restart: 
+      always
+    networks:
+      default:
+        ipv4_address: 172.16.1.12
+
+
   
 networks:
   default:
